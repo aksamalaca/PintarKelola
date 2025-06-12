@@ -87,18 +87,19 @@ menu = st.sidebar.radio(
 
 if menu == "Beranda":
     st.title("Welcome to PintarKelola")
-    col1, col2 = st.columns([2, 1])
-    with col1:
-        st.markdown("""<div style='font-size:18px; line-height:1.6'>
-            <b>PintarKelola</b> membantu Anda mengelola pengeluaran harian secara otomatis.<br><br>
-            Cukup unggah teks dari struk belanja, dan sistem akan mengklasifikasikan item secara otomatis menggunakan NLP dan Machine Learning.<br><br>
-            <h4>Alur Aplikasi:</h4>
-            <code>Upload Teks Struk</code> → <code>Klasifikasi NLP</code> → <code>Visualisasi & Riwayat</code>
-        </div>""", unsafe_allow_html=True)
-    with col2:
-        st.markdown("<div style='margin-top: 90px;'>", unsafe_allow_html=True)
-        st.image("dashboard/5421936.jpg", use_container_width=True)
-        st.markdown("</div>", unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='font-size:18px; line-height:1.6'>
+        <b>PintarKelola</b> membantu Anda mengelola pengeluaran harian secara otomatis.<br><br>
+        Cukup unggah teks dari struk belanja, dan sistem akan mengklasifikasikan item secara otomatis menggunakan NLP dan Machine Learning.<br><br>
+        <h4>Alur Aplikasi:</h4>
+        <code>Upload Teks Struk</code> → <code>Klasifikasi NLP</code> → <code>Visualisasi & Riwayat</code>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<div style='margin-top: 20px;'>", unsafe_allow_html=True)
+    st.image("dashboard/5421936.png", width=500)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 elif menu == "Upload Teks Struk":
     st.header("📄 Upload Teks Struk")
