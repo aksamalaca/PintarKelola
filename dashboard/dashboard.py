@@ -6,11 +6,23 @@ import time
 from utils import extract_items_from_text, predict_category
 from utils import parse_rupiah_column
 
+# 1️⃣ Page config
 st.set_page_config(page_title="PintarKelola", layout="wide")
 
-with st.sidebar:
-    st.markdown("""
-<style>
+# 2️⃣ CSS lengkap
+st.markdown("""
+    <style>
+        /* Putih untuk area utama */
+        html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"], [data-testid="stToolbar"] {
+            background-color: white !important;
+        }
+
+        /* Sidebar jadi abu-abu terang */
+        [data-testid="stSidebar"] {
+            background-color: #E8BEA !important;
+        }
+
+        /* Sidebar styling */
         .sidebar-title {
             font-size: 20px;
             font-weight: bold;
@@ -51,16 +63,18 @@ with st.sidebar:
         }
 
         section[data-testid="stSidebar"] div[role="radiogroup"] > label[data-selected="true"] {
-            background-color: #AD3E90;
+            background-color: #AD3E90 !important;
             color: white !important;
         }
 
         section[data-testid="stSidebar"] div[role="radiogroup"] > label[data-selected="true"] * {
             color: white !important;
         }
-        </style>
-        """, unsafe_allow_html=True)
+    </style>
+""", unsafe_allow_html=True)
 
+# 3️⃣ Isi sidebar
+with st.sidebar:
     st.image("dashboard/logo.png", width=200)
 
 if "menu" not in st.session_state:
