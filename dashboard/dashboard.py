@@ -6,10 +6,7 @@ import time
 from utils import extract_items_from_text, predict_category
 from utils import parse_rupiah_column
 
-# 1️⃣ Page config
 st.set_page_config(page_title="PintarKelola", layout="wide")
-
-# 2️⃣ CSS lengkap
 st.markdown("""
     <style>
         /* Putih untuk area utama */
@@ -72,8 +69,6 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
-
-# 3️⃣ Isi sidebar
 with st.sidebar:
     st.image("dashboard/logo.png", width=200)
 
